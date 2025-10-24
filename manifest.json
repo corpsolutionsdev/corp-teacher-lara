@@ -1,0 +1,61 @@
+{
+  "name": "Teacher Lara | English - Destrave seu inglês e conquiste o mundo!",
+  "short_name": "Teacher Lara",
+  "description": "Professora de inglês com mais de 10 anos de experiência. Cursos especializados para profissionais: Speaking Bolt Interview, aulas particulares e muito mais.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0e285b",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "categories": ["education", "language", "business"],
+  "icons": [
+    {
+      "src": "src/img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "src/img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "src/img/aboutme.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Bolt Interview",
+      "short_name": "Interview",
+      "description": "Acesse o curso Bolt Interview",
+      "url": "/#interview",
+      "icons": [
+        {
+          "src": "src/img/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contato",
+      "short_name": "Contato",
+      "description": "Entre em contato via WhatsApp",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "src/img/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

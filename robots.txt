@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://teacherlara.com/sitemap.xml
+
+# Crawl-delay (opcional - 1 segundo entre requisições)
+Crawl-delay: 1
+
+# Permitir acesso a recursos estáticos
+Allow: /src/
+Allow: /src/css/
+Allow: /src/js/
+Allow: /src/img/
+
+# Bloquear arquivos desnecessários para SEO
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.txt$
+Disallow: /*.md$
+
+# Permitir acesso ao manifest e outros arquivos importantes
+Allow: /manifest.json
+Allow: /robots.txt
+Allow: /sitemap.xml
