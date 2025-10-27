@@ -51,13 +51,61 @@
                     <img src="src/img/logo.png" alt="Teacher Lara Logo">
                 </a>
                 <a href="#about" class="nav-link" data-aos="fade-down" data-aos-delay="200">Sobre Mim</a>
-                <a href="#services" class="nav-link" data-aos="fade-down" data-aos-delay="300">Como Funciona</a>
+                <a href="#services" class="nav-link" data-aos="fade-down" data-aos-delay="300">Soluções</a>
                 <a href="#interview" class="nav-link" data-aos="fade-down" data-aos-delay="400">Bolt Interview</a>
                 <a href="#testimonials" class="nav-link" data-aos="fade-down" data-aos-delay="500">Depoimentos</a>
                 <a href="#contact" class="nav-link" data-aos="fade-down" data-aos-delay="600">Contato</a>
             </div>
+            
+            <!-- Mobile Navigation Toggle Button -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu de navegação">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </nav>
+    
+    <!-- Mobile Navigation Drawer - Fora da action bar -->
+    <div class="nav-drawer" id="nav-drawer">
+        <div class="drawer-content">
+            <div class="drawer-menu">
+                <a href="#home" class="drawer-link">
+                    <i class="fas fa-home"></i>
+                    <span>Início</span>
+                </a>
+                <a href="#about" class="drawer-link">
+                    <i class="fas fa-user"></i>
+                    <span>Sobre Mim</span>
+                </a>
+                <a href="#services" class="drawer-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Soluções</span>
+                </a>
+                <a href="#interview" class="drawer-link">
+                    <i class="fas fa-bolt"></i>
+                    <span>Bolt Interview</span>
+                </a>
+                <a href="#testimonials" class="drawer-link">
+                    <i class="fas fa-quote-left"></i>
+                    <span>Depoimentos</span>
+                </a>
+                <a href="#contact" class="drawer-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contato</span>
+                </a>
+            </div>
+            <div class="drawer-footer">
+                <a href="https://api.whatsapp.com/send?phone=5522998705557" class="drawer-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Falar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -65,21 +113,23 @@
         <div class="hero-container">
             <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
                 <div class="hero-text">
-                    <div class="hero-logo-mobile" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                        <img src="src/img/logo.png" alt="Teacher Lara Logo">
+                    <!-- Logo Bolt - Mobile Only -->
+                    <div class="hero-logo-bolt-mobile" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                        <img src="src/img/logo-bolt.png" alt="Bolt Logo">
                     </div>
+                    
                     <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                        <span class="highlight">Destrave</span> seu inglês.
+                        Inglês para
                     </h1>
                     <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                        <span class="highlight">Conquiste</span> o mundo!
+                        <span class="highlight">líderes, profissionais e empresas que buscam performance global</span>
                     </h2>
                     <p class="hero-description" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-                        A preparação que você precisa para falar com confiança em qualquer situação profissional.
+                        Prepare-se para se comunicar com confiança em reuniões, apresentações e entrevistas internacionais.
                     </p>
                     <a href="https://api.whatsapp.com/send?phone=5522998705557" class="cta-button" target="_blank" rel="noopener noreferrer" aria-label="Entrar em contato via WhatsApp" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="800">
                         <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                        Saiba Mais
+                        Fale Comigo
                     </a>
                 </div>
             </div>
@@ -95,13 +145,19 @@
                 </div>
                 <div class="about-text" data-aos="fade-left">
                     <h2 class="section-title">
-                        Meet you <span class="highlight">teacher!</span>
+                        Muito além de <span class="highlight">aulas de inglês.</span> Um método criado para profissionais reais.
                     </h2>
                     <p class="about-description">
-                        Sou Lara Lucchetti, professora de inglês com mais de 10 anos de experiência e certificação internacional. Já enfrentei os desafios de aprender inglês e sei como torná-lo mais simples e eficiente.
+                        Sou Lara Lucchetti, professora e criadora do Método Speaking Bolt, desenvolvido para quem precisa do inglês como ferramenta de trabalho.
                     </p>
                     <p class="about-description">
-                        Acredito que aprender inglês é sobre se conectar com o idioma e destravar novas oportunidades. Com o Speaking Bolt, foco na prática real e estratégias que funcionam para você alcançar confiança e fluência.
+                        Sou formada em letras, pós graduada em metodologia de idiomas e certificada por Cambridge. Há mais de 12 anos treino profissionais e equipes corporativas para se comunicarem com confiança em reuniões, apresentações e entrevistas internacionais.
+                    </p>
+                    <p class="about-description">
+                        Minha metodologia combina conversação real, vocabulário estratégico e contextos de negócios, ajudando alunos a destravarem o inglês de forma prática, aplicada e voltada à performance.
+                    </p>
+                    <p class="about-description">
+                        Já treinei profissionais de diversas empresas além de líderes e gestores de diferentes áreas que queriam dar o próximo passo na carreira global.
                     </p>
                 </div>
             </div>
@@ -112,72 +168,72 @@
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-up">
-                Como <span class="highlight">Funciona</span>
+                Programas e <span class="highlight">Soluções</span>
             </h2>
             
             <!-- Services Grid for Mobile -->
             <div class="services-grid">
-                <div class="service-card" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                <div class="service-card" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" data-plan="bolt-classroom">
                     <div class="service-image">
-                        <img src="src/img/services/01.jpg" alt="Aulas Particulares">
+                        <img src="src/img/services/bolt-classroom.svg" alt="Aulas Particulares">
                     </div>
                     <div class="service-content">
                         <h3>1. Aulas Particulares e Mini Grupos</h3>
                         <p>Programas personalizados para profissionais que querem destravar o inglês com foco em comunicação real — reuniões, apresentações, networking, negociações, e entrevistas.</p>
-                        <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Gostaria de saber mais sobre as Aulas Particulares e Mini Grupos. Podem me ajudar com mais informações?" class="service-link" target="_blank">
-                            Saiba Mais <i class="fas fa-arrow-right"></i>
+                        <a href="#" class="service-link" onclick="return false;">
+                            Ver Plano <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-plan="bolt-club">
                     <div class="service-image">
-                        <img src="src/img/services/02.jpg" alt="Bolt Club">
+                        <img src="src/img/services/bolt-club.svg" alt="Bolt Club">
                     </div>
                     <div class="service-content">
                         <h3>2. Bolt Club</h3>
                         <p>Clube de conversação semanal com temas de negócios, vocabulário moderno e prática guiada, ideal pra quem quer colocar o inglês em uso contínuo e ganhar fluência.</p>
-                        <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Tenho interesse no Bolt Club. Gostaria de saber mais sobre o clube de conversação semanal!" class="service-link" target="_blank">
-                            Saiba Mais <i class="fas fa-arrow-right"></i>
+                        <a href="#" class="service-link" onclick="return false;">
+                            Ver Plano <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="service-card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+                <div class="service-card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" data-plan="bolt-interview">
                     <div class="service-image">
-                        <img src="src/img/services/03.jpg" alt="Bolt Interview">
+                        <img src="src/img/services/bolt-interview.svg" alt="Bolt Interview">
                     </div>
                     <div class="service-content">
                         <h3>3. Bolt Interview</h3>
                         <p>Treinamento prático pra entrevistas de emprego em inglês. Ensina frameworks de resposta, storytelling e comunicação de valor pessoal com confiança.</p>
-                        <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Quero saber mais sobre o Bolt Interview. Preciso me preparar para entrevistas em inglês!" class="service-link" target="_blank">
-                            Saiba Mais <i class="fas fa-arrow-right"></i>
+                        <a href="#" class="service-link" onclick="return false;">
+                            Ver Plano <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="service-card" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
+                <div class="service-card" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000" data-plan="bolt-linkedin">
                     <div class="service-image">
-                        <img src="src/img/services/04.jpg" alt="Bolt LinkedIn">
+                        <img src="src/img/services/bolt-linkedin.svg" alt="Bolt LinkedIn">
                     </div>
                     <div class="service-content">
                         <h3>4. Bolt LinkedIn</h3>
                         <p>Ajuste e tradução de perfis para o LinkedIn em inglês, com foco em posicionamento internacional e linguagem corporativa e currículo em inglês.</p>
-                        <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Tenho interesse no Bolt LinkedIn. Preciso de ajuda para traduzir meu perfil para o LinkedIn em inglês!" class="service-link" target="_blank">
-                            Saiba Mais <i class="fas fa-arrow-right"></i>
+                        <a href="#" class="service-link" onclick="return false;">
+                            Ver Plano <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-plan="bolt-b2b">
                     <div class="service-image">
-                        <img src="src/img/services/05.jpg" alt="Programas B2B">
+                        <img src="src/img/services/bolt-b2b.svg" alt="Programas B2B">
                     </div>
                     <div class="service-content">
                         <h3>5. Programas para Empresas (B2B)</h3>
                         <p>Parcerias com empresas que buscam desenvolver a fluência do time em contextos reais de trabalho — reuniões, relatórios, apresentações e calls internacionais.</p>
-                        <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Represento uma empresa e temos interesse nos Programas B2B. Gostaria de saber mais sobre as parcerias para desenvolvimento de inglês corporativo!" class="service-link" target="_blank">
-                            Saiba Mais <i class="fas fa-arrow-right"></i>
+                        <a href="#" class="service-link" onclick="return false;">
+                            Ver Plano <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -186,67 +242,67 @@
             <!-- Carousel Container for Desktop -->
             <div class="services-carousel-wrapper">
                 <div class="services-carousel" id="services-carousel">
-                    <div class="service-card carousel-card" data-service="1">
+                    <div class="service-card carousel-card" data-service="1" data-plan="bolt-classroom">
                         <div class="service-image">
-                            <img src="src/img/services/01.jpg" alt="Aulas Particulares">
+                            <img src="src/img/services/bolt-classroom.svg" alt="Aulas Particulares">
                         </div>
                         <div class="service-content">
                             <h3>Aulas Particulares e Mini Grupos</h3>
                             <p>Programas personalizados para profissionais que querem destravar o inglês com foco em comunicação real — reuniões, apresentações, networking, negociações, e entrevistas.</p>
-                            <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Gostaria de saber mais sobre as Aulas Particulares e Mini Grupos. Podem me ajudar com mais informações?" class="service-link" target="_blank">
-                                Saiba Mais <i class="fas fa-arrow-right"></i>
+                            <a href="#" class="service-link" onclick="return false;">
+                                Ver Plano <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="service-card carousel-card" data-service="2">
+                    <div class="service-card carousel-card" data-service="2" data-plan="bolt-club">
                         <div class="service-image">
-                            <img src="src/img/services/02.jpg" alt="Bolt Club">
+                            <img src="src/img/services/bolt-club.svg" alt="Bolt Club">
                         </div>
                         <div class="service-content">
                             <h3>Bolt Club</h3>
                             <p>Clube de conversação semanal com temas de negócios, vocabulário moderno e prática guiada, ideal pra quem quer colocar o inglês em uso contínuo e ganhar fluência.</p>
-                            <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Tenho interesse no Bolt Club. Gostaria de saber mais sobre o clube de conversação semanal!" class="service-link" target="_blank">
-                                Saiba Mais <i class="fas fa-arrow-right"></i>
+                            <a href="#" class="service-link" onclick="return false;">
+                                Ver Plano <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="service-card carousel-card" data-service="3">
+                    <div class="service-card carousel-card" data-service="3" data-plan="bolt-interview">
                         <div class="service-image">
-                            <img src="src/img/services/03.jpg" alt="Bolt Interview">
+                            <img src="src/img/services/bolt-interview.svg" alt="Bolt Interview">
                         </div>
                         <div class="service-content">
                             <h3>Bolt Interview</h3>
                             <p>Treinamento prático pra entrevistas de emprego em inglês. Ensina frameworks de resposta, storytelling e comunicação de valor pessoal com confiança.</p>
-                            <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Quero saber mais sobre o Bolt Interview. Preciso me preparar para entrevistas em inglês!" class="service-link" target="_blank">
-                                Saiba Mais <i class="fas fa-arrow-right"></i>
+                            <a href="#" class="service-link" onclick="return false;">
+                                Ver Plano <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="service-card carousel-card" data-service="4">
+                    <div class="service-card carousel-card" data-service="4" data-plan="bolt-linkedin">
                         <div class="service-image">
-                            <img src="src/img/services/04.jpg" alt="Bolt LinkedIn">
+                            <img src="src/img/services/bolt-linkedin.svg" alt="Bolt LinkedIn">
                         </div>
                         <div class="service-content">
                             <h3>Bolt LinkedIn</h3>
                             <p>Ajuste e tradução de perfis para o LinkedIn em inglês, com foco em posicionamento internacional e linguagem corporativa e currículo em inglês.</p>
-                            <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Tenho interesse no Bolt LinkedIn. Preciso de ajuda para traduzir meu perfil para o LinkedIn em inglês!" class="service-link" target="_blank">
-                                Saiba Mais <i class="fas fa-arrow-right"></i>
+                            <a href="#" class="service-link" onclick="return false;">
+                                Ver Plano <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="service-card carousel-card" data-service="5">
+                    <div class="service-card carousel-card" data-service="5" data-plan="bolt-b2b">
                         <div class="service-image">
-                            <img src="src/img/services/05.jpg" alt="Programas B2B">
+                            <img src="src/img/services/bolt-b2b.svg" alt="Programas B2B">
                         </div>
                         <div class="service-content">
                             <h3>Programas para Empresas (B2B)</h3>
                             <p>Parcerias com empresas que buscam desenvolver a fluência do time em contextos reais de trabalho — reuniões, relatórios, apresentações e calls internacionais.</p>
-                            <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Represento uma empresa e temos interesse nos Programas B2B. Gostaria de saber mais sobre as parcerias para desenvolvimento de inglês corporativo!" class="service-link" target="_blank">
-                                Saiba Mais <i class="fas fa-arrow-right"></i>
+                            <a href="#" class="service-link" onclick="return false;">
+                                Ver Plano <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -412,7 +468,7 @@
                     <p>Entre em contato e reserve sua vaga diretamente com sua teacher!⚡️</p>
                     <a href="https://api.whatsapp.com/send?phone=5522998705557" class="cta-button large" target="_blank">
                         <i class="fab fa-whatsapp"></i>
-                        Saiba Mais
+                        Fale Comigo
                     </a>
                 </div>
                 
@@ -440,6 +496,189 @@
             </div>
         </div>
     </section>
+
+    <!-- Modals -->
+    <!-- Modal: Bolt Classroom - Aulas Particulares e Mini Grupos -->
+    <div id="modal-bolt-classroom" class="service-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar modal">&times;</button>
+            <div class="modal-header">
+                <h2>Aulas Particulares</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-plans-grid">
+                    <!-- Opção 1: Aulas Individuais -->
+                <div class="modal-plan-option">
+                    <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Aulas Individuais</h3>
+                    
+                    <div class="modal-section">
+                        <h3>Como Funciona?</h3>
+                        <p>As aulas individuais ocorrem em horários reduzidos (10 às 17h) e com alunos selecionados.</p>
+                        <p>Antes de tudo, faremos uma análise do seu nível de inglês. Assim vamos mapear suas principais dificuldades e trabalhar de acordo com seus objetivos.</p>
+                        <p>Os pacotes de aulas são sempre abertos a cada semestre. As aulas são 100% online. A duração do pacote é de 20 aulas no total, finalizando assim um módulo.</p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Pacotes Personalizados</h3>
+                        <ul>
+                            <li>Material digital</li>
+                            <li>Plataforma de atividades exclusiva</li>
+                            <li>Acompanhamento personalizado</li>
+                            <li>Certificado de conclusão</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-investment-inline">
+                        <h4>Investimento</h4>
+                        <div class="investment-options">
+                            <p class="investment-option"><strong>R$ 6x 596,00</strong> no cartão</p>
+                            <p class="investment-option"><strong>R$ 2.990,00</strong> no PIX</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Quero Aulas Individuais." class="cta-button" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Quero Aulas Individuais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Opção 2: Mini Grupos -->
+                <div class="modal-plan-option">
+                    <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Aulas em Mini Grupos</h3>
+                    
+                    <div class="modal-section">
+                        <h3>Como Funciona?</h3>
+                        <p>As aulas são 100% de conversação com o foco em Business English.</p>
+                        <p>A duração do pacote é de 20 aulas no total, finalizando assim um módulo dentro de um semestre.</p>
+                        <p>Os pacotes de aulas são sempre abertos a cada semestre. As aulas são 100% online. A duração do pacote é de 20 aulas no total, finalizando assim um módulo.</p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Você Receberá</h3>
+                        <ul>
+                            <li>Certificado de conclusão</li>
+                            <li>1:15 de duração por aula</li>
+                            <li>Material digital</li>
+                            <li>Plataforma de atividades exclusiva</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3>Bônus</h3>
+                        <ul>
+                            <li>Planner de atividades semanal</li>
+                            <li>Aula extra no clube de conversação segunda às 20:15-21:45</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-investment-inline">
+                        <h4>Investimento</h4>
+                        <div class="investment-options">
+                            <p class="investment-option"><strong>R$ 6x 425,00</strong> no cartão</p>
+                            <p class="investment-option"><strong>R$ 2.340,00</strong> no PIX</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Quero Aulas em Mini Grupos." class="cta-button" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Quero Aulas em Mini Grupos
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Bolt Club -->
+    <div id="modal-bolt-club" class="service-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar modal">&times;</button>
+            <div class="modal-header">
+                <h2>Bolt Club</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Como Funciona?</h3>
+                    <p>Um clube de conversação e desafios semanais para praticar inglês de forma consistente, aumentando sua confiança e habilidade comunicativa.</p>
+                    <p>Você se sente confortável e acolhido em um grupo de alunos que também estão na luta para destravar o inglês, então não precisa ter vergonha.</p>
+                    <p>Durante o Bolt Club você conversará em dupla e não ficará exposto em um grupo enorme de alunos.</p>
+                    <p>Meu feedback e monitoramento é constante e são blocos de conversação sempre trazendo temas da atualidade, business e carreira.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Assinatura Mensal</h3>
+                    <ul>
+                        <li>Aulas na Segunda às 19h e quinta às 7h</li>
+                        <li>Planner semanal</li>
+                        <li>Agendamentos de segunda a sábado em dupla</li>
+                    </ul>
+                </div>
+
+                <div class="modal-investment">
+                    <h3>Investimento</h3>
+                    <div class="investment-options">
+                        <p class="investment-option"><strong>R$ 230,00</strong> por mês</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Quero entrar no Bolt Club." class="cta-button" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Entrar no Bolt Club
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Bolt LinkedIn -->
+    <div id="modal-bolt-linkedin" class="service-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar modal">&times;</button>
+            <div class="modal-header">
+                <h2>Bolt LinkedIn</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Como Funciona?</h3>
+                    <p>Especialmente desenhado para profissionais que desejam aprimorar seu perfil no LinkedIn, utilizando o inglês para expandir suas oportunidades de carreira.</p>
+                    <p>Será uma consultoria completa para o seu perfil ter uma descrição otimizada e suas experiências em inglês, tornando seu perfil mais estratégico para as empresas internacionais.</p>
+                </div>
+
+                <div class="modal-investment">
+                    <h3>Investimento</h3>
+                    <div class="investment-options">
+                        <p class="investment-option"><strong>R$ 280,00</strong> à vista</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Quero o Bolt LinkedIn." class="cta-button" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Quero o Bolt LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Bolt B2B -->
+    <div id="modal-bolt-b2b" class="service-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar modal">&times;</button>
+            <div class="modal-header">
+                <h2>Programas para Empresas (B2B)</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Como Funciona?</h3>
+                    <p>Parcerias com empresas que buscam desenvolver a fluência do time em contextos reais de trabalho — reuniões, relatórios, apresentações e calls internacionais.</p>
+                </div>
+
+                <div class="modal-investment">
+                    <h3>Investimento</h3>
+                    <div class="investment-options">
+                        <p class="investment-option"><strong>Preço a consultar</strong></p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Quero conhecer os Programas B2B." class="cta-button" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Quero Programas B2B
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

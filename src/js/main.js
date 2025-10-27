@@ -61,8 +61,97 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Navigation Links
     const navLinks = document.querySelectorAll('.nav-link');
+    const drawerLinks = document.querySelectorAll('.drawer-link');
 
-    // Smooth scrolling for navigation links
+    // Mobile Navigation Drawer Control
+    const navToggle = document.getElementById('nav-toggle');
+    const navDrawer = document.getElementById('nav-drawer');
+    const drawerClose = document.getElementById('drawer-close');
+    const drawerOverlay = document.getElementById('drawer-overlay');
+
+    // Debug: Check if elements exist
+    console.log('Nav Toggle:', navToggle);
+    console.log('Nav Drawer:', navDrawer);
+    console.log('Drawer Close:', drawerClose);
+    console.log('Drawer Overlay:', drawerOverlay);
+
+    // Toggle drawer function
+    function toggleDrawer() {
+        console.log('Toggle drawer called');
+        console.log('Nav Drawer element:', navDrawer);
+        
+        if (!navDrawer) {
+            console.error('Nav drawer element not found!');
+            return;
+        }
+        
+        const isActive = navDrawer.classList.contains('active');
+        console.log('Is active:', isActive);
+        
+        if (isActive) {
+            closeDrawer();
+        } else {
+            openDrawer();
+        }
+    }
+
+    // Open drawer function
+    function openDrawer() {
+        console.log('Opening drawer...');
+        if (navDrawer) navDrawer.classList.add('active');
+        if (drawerOverlay) drawerOverlay.classList.add('active');
+        if (navToggle) navToggle.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+        console.log('Drawer opened');
+    }
+
+    // Close drawer function
+    function closeDrawer() {
+        console.log('Closing drawer...');
+        if (navDrawer) navDrawer.classList.remove('active');
+        if (drawerOverlay) drawerOverlay.classList.remove('active');
+        if (navToggle) navToggle.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+        console.log('Drawer closed');
+    }
+
+    // Event listeners for mobile navigation
+    if (navToggle) {
+        navToggle.addEventListener('click', toggleDrawer);
+    }
+
+    if (drawerClose) {
+        drawerClose.addEventListener('click', closeDrawer);
+    }
+
+    if (drawerOverlay) {
+        drawerOverlay.addEventListener('click', closeDrawer);
+    }
+
+    // Close drawer when clicking on drawer links
+    drawerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                // Close drawer first
+                closeDrawer();
+                
+                // Then scroll to target
+                setTimeout(() => {
+                    const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }, 300); // Wait for drawer close animation
+            }
+        });
+    });
+
+    // Smooth scrolling for navigation links (desktop)
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -77,6 +166,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+    });
+
+    // Close drawer on window resize to desktop
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            closeDrawer();
+        }
+    });
+
+    // Close drawer on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navDrawer.classList.contains('active')) {
+            closeDrawer();
+        }
     });
 
 
@@ -463,6 +566,108 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
     }
+});
+
+// Service Modals Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceLinks = document.querySelectorAll('.service-link');
+    const modals = document.querySelectorAll('.service-modal');
+    const modalCloses = document.querySelectorAll('.modal-close');
+    const modalOverlays = document.querySelectorAll('.modal-overlay');
+
+    // Modal mapping
+    const modalMap = {
+        'bolt-classroom': 'modal-bolt-classroom',
+        'bolt-club': 'modal-bolt-club',
+        'bolt-linkedin': 'modal-bolt-linkedin',
+        'bolt-b2b': 'modal-bolt-b2b',
+        'bolt-interview': null // Special case - scroll to section
+    };
+
+    // Open modal function
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Scroll to section function
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const offsetTop = section.offsetTop - 70; // Account for fixed navbar
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    // Close modal function
+    function closeModal(modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close all modals
+    function closeAllModals() {
+        modals.forEach(modal => {
+            closeModal(modal);
+        });
+    }
+
+    // Event listeners for service links
+    serviceLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const card = this.closest('.service-card');
+            if (card) {
+                const planId = card.getAttribute('data-plan');
+                // Special case: bolt-interview should scroll to section
+                if (planId === 'bolt-interview') {
+                    scrollToSection('interview');
+                } else if (planId && modalMap[planId]) {
+                    openModal(modalMap[planId]);
+                }
+            }
+        });
+    });
+
+    // Close modal on close button click
+    modalCloses.forEach(closeBtn => {
+        closeBtn.addEventListener('click', function() {
+            const modal = this.closest('.service-modal');
+            if (modal) {
+                closeModal(modal);
+            }
+        });
+    });
+
+    // Close modal on overlay click
+    modalOverlays.forEach(overlay => {
+        overlay.addEventListener('click', function() {
+            const modal = this.closest('.service-modal');
+            if (modal) {
+                closeModal(modal);
+            }
+        });
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+    });
+
+    // Prevent modal body from closing modal when clicking inside
+    document.querySelectorAll('.modal-content').forEach(content => {
+        content.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
 });
 
 
