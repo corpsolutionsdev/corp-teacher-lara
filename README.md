@@ -35,8 +35,10 @@ Este é um site institucional moderno e responsivo desenvolvido para a Teacher L
 - **Manifest.json**: Configuração PWA
 
 ### Recursos
-- **WhatsApp Integration**: Botão flutuante e links diretos
-- **Carousel Responsivo**: Galeria de serviços
+- **WhatsApp Integration**: Botão flutuante (aparece ao rolar a página) e links diretos
+- **Navegação Dropdown**: Menu de soluções com acesso rápido aos 5 serviços principais
+- **Carousel Responsivo**: Galeria de serviços no desktop
+- **Modais Interativos**: Detalhes dos serviços em modais elegantes
 - **Video Embeds**: Conteúdo multimídia otimizado
 - **Formulários de Contato**: Integração com WhatsApp
 
@@ -60,7 +62,7 @@ corp-teacher-lara/
         ├── logo-white.png # Logo para footer
         ├── logo-bolt.png  # Logo Bolt
         ├── aboutme.webp   # Foto da professora
-        ├── background.webp # Background hero
+        ├── background.webp # Background usado na seção Sobre Mim
         ├── products/      # Imagens dos produtos
         └── services/      # Imagens dos serviços
 ```
@@ -69,13 +71,13 @@ corp-teacher-lara/
 
 ### 1. **Hero Section**
 - Apresentação principal com call-to-action
-- Background dinâmico e responsivo
+- Layout limpo e focado na mensagem
 - Logo e mensagem principal
 
 ### 2. **Sobre Mim**
 - Apresentação da Teacher Lara
 - Experiência e credenciais
-- Design com imagem e texto
+- Design em card único com texto à esquerda e background à direita
 
 ### 3. **Como Funciona (Serviços)**
 - Grid responsivo para mobile
@@ -138,9 +140,10 @@ O site foi desenvolvido com abordagem **Mobile First** e inclui breakpoints para
 
 ### Características Responsivas
 
-- **Navegação**: Menu hamburger no mobile, menu horizontal no desktop
+- **Navegação**: Menu hamburger no mobile, menu horizontal no desktop com dropdown de soluções
 - **Hero**: Layout adaptativo com logo mobile
 - **Serviços**: Grid no mobile, carousel no desktop
+- **Dropdown de Soluções**: Menu suspenso no desktop (hover) e expansível no mobile (clique)
 - **Imagens**: Otimizadas e responsivas
 - **Tipografia**: Escalas fluidas
 

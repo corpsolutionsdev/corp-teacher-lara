@@ -178,6 +178,76 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 12px rgba(14, 40, 91, 0.3);
 }
 
+/* Navigation Dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-dropdown .dropdown-toggle i {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 280px;
+    box-shadow: var(--shadow-xl);
+    border-radius: var(--border-radius);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    margin-top: 10px;
+    padding: 8px 0;
+    border: 1px solid var(--gray-200);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 24px;
+    color: var(--gray-700);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(90deg, rgba(14, 40, 91, 0.05), transparent);
+    color: var(--primary-color);
+    border-left-color: var(--primary-color);
+    padding-left: 28px;
+}
+
+.dropdown-item:first-child {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.dropdown-item:last-child {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
 .nav-logo {
     text-decoration: none;
     display: flex;
@@ -211,17 +281,6 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-.hero-background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    background: url('../img/background.webp') no-repeat center center;
-    background-size: cover;
-    will-change: transform;
-    z-index: 1;
-}
 
 .hero-container {
     width: 100%;
@@ -355,21 +414,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
+    display: flex;
+    position: relative;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    min-height: 500px;
 }
 
-.about-image img {
-    width: 70%;
-    height: auto;
-    border-radius: var(--border-radius-lg) 0 0 var(--border-radius-lg);
+.about-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: url('../img/background.webp') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
 }
 
 .about-text {
-    padding-left: 0.1rem;
+    flex: 1;
+    padding: 60px;
     position: relative;
+    z-index: 2;
+    max-width: 60%;
 }
 
 .about-text .section-title {
@@ -1622,10 +1693,6 @@ h1, h2, h3, h4, h5, h6 {
         min-height: 100vh;
     }
     
-    .hero-background {
-        display: none !important;
-    }
-    
     /* Garantir que não haja scroll horizontal */
     .services-carousel-wrapper {
         display: none !important;
@@ -1758,12 +1825,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .about-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .about-content::after {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        order: -1;
     }
 
     .about-text {
-        padding-left: 0;
+        max-width: 100%;
+        padding: 40px 30px;
     }
 
     .about-text .section-title {
@@ -1793,18 +1868,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .interview-image {
-        order: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .interview-image img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        border-radius: var(--border-radius-lg);
-        box-shadow: var(--shadow-xl);
+        display: none !important;
     }
 
     .interview-cta {
@@ -1904,10 +1968,6 @@ h1, h2, h3, h4, h5, h6 {
         overflow-x: hidden;
     }
     
-    .hero-background {
-        display: none !important;
-    }
-    
     /* Garantir que não haja scroll horizontal */
     .services-carousel-wrapper {
         display: none !important;
@@ -1971,6 +2031,18 @@ h1, h2, h3, h4, h5, h6 {
 
     .about {
         padding: 60px 0;
+    }
+
+    .about-content {
+        min-height: auto;
+    }
+
+    .about-content::after {
+        height: 250px;
+    }
+
+    .about-text {
+        padding: 30px 20px;
     }
 
     .about-text .section-title {
@@ -2206,10 +2278,6 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
-    }
-    
-    .hero-background {
-        display: none !important;
     }
     
     /* Garantir que não haja scroll horizontal */
@@ -2545,6 +2613,11 @@ h1, h2, h3, h4, h5, h6 {
     animation: pulse 2s infinite;
     opacity: 1 !important;
     transform: translateY(0) !important;
+}
+
+/* Hide WhatsApp button when on home section (desktop and mobile) */
+.whatsapp-float.hide-on-home {
+    display: none !important;
 }
 
 .whatsapp-float:hover {
@@ -2914,8 +2987,62 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: 12px !important;
         font-weight: 600 !important;
         font-size: 16px !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3) !important;
+    }
+    
+    /* Drawer Dropdown */
+    .drawer-dropdown {
+        position: relative !important;
+    }
+    
+    .drawer-dropdown-toggle {
+        justify-content: space-between !important;
+    }
+    
+    .drawer-chevron {
+        margin-left: auto !important;
+        font-size: 14px !important;
+        transition: transform 0.3s ease !important;
+    }
+    
+    .drawer-dropdown.active .drawer-chevron {
+        transform: rotate(180deg) !important;
+    }
+    
+    .drawer-submenu {
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: max-height 0.3s ease !important;
+        background: rgba(14, 40, 91, 0.02) !important;
+    }
+    
+    .drawer-dropdown.active .drawer-submenu {
+        max-height: 500px !important;
+    }
+    
+    .drawer-sublink {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 12px 24px 12px 48px !important;
+        color: var(--gray-600) !important;
+        text-decoration: none !important;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        transition: all 0.3s ease !important;
+        border-left: 3px solid transparent !important;
+    }
+    
+    .drawer-sublink:hover {
+        background: rgba(14, 40, 91, 0.05) !important;
+        color: var(--primary-color) !important;
+        border-left-color: var(--primary-color) !important;
+        padding-left: 52px !important;
+    }
+    
+    .drawer-sublink i {
+        font-size: 6px !important;
+        width: auto !important;
+        color: var(--primary-color) !important;
     }
     
     .drawer-whatsapp:hover {

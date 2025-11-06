@@ -4,16 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize WhatsApp button visibility on page load
     const whatsappButtonInit = document.querySelector('.whatsapp-float');
     if (whatsappButtonInit) {
-        if (window.innerWidth <= 768) {
-            // On mobile, hide by default (will be controlled by scroll)
-            if (window.scrollY > 100) {
-                whatsappButtonInit.classList.remove('hide-on-home');
-            } else {
-                whatsappButtonInit.classList.add('hide-on-home');
-            }
-        } else {
-            // On desktop, always show
+        // Hide by default on both mobile and desktop (will be controlled by scroll)
+        if (window.scrollY > 100) {
             whatsappButtonInit.classList.remove('hide-on-home');
+        } else {
+            whatsappButtonInit.classList.add('hide-on-home');
         }
     }
     
@@ -69,24 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const drawerClose = document.getElementById('drawer-close');
     const drawerOverlay = document.getElementById('drawer-overlay');
 
-    // Debug: Check if elements exist
-    console.log('Nav Toggle:', navToggle);
-    console.log('Nav Drawer:', navDrawer);
-    console.log('Drawer Close:', drawerClose);
-    console.log('Drawer Overlay:', drawerOverlay);
-
     // Toggle drawer function
     function toggleDrawer() {
-        console.log('Toggle drawer called');
-        console.log('Nav Drawer element:', navDrawer);
-        
         if (!navDrawer) {
-            console.error('Nav drawer element not found!');
             return;
         }
         
         const isActive = navDrawer.classList.contains('active');
-        console.log('Is active:', isActive);
         
         if (isActive) {
             closeDrawer();
@@ -97,22 +81,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Open drawer function
     function openDrawer() {
-        console.log('Opening drawer...');
         if (navDrawer) navDrawer.classList.add('active');
         if (drawerOverlay) drawerOverlay.classList.add('active');
         if (navToggle) navToggle.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent background scroll
-        console.log('Drawer opened');
     }
 
     // Close drawer function
     function closeDrawer() {
-        console.log('Closing drawer...');
         if (navDrawer) navDrawer.classList.remove('active');
         if (drawerOverlay) drawerOverlay.classList.remove('active');
         if (navToggle) navToggle.classList.remove('active');
         document.body.style.overflow = ''; // Restore scroll
-        console.log('Drawer closed');
     }
 
     // Event listeners for mobile navigation
@@ -128,9 +108,26 @@ document.addEventListener('DOMContentLoaded', function() {
         drawerOverlay.addEventListener('click', closeDrawer);
     }
 
+    // Drawer dropdown toggle
+    const drawerDropdownToggle = document.querySelector('.drawer-dropdown-toggle');
+    const drawerDropdown = document.querySelector('.drawer-dropdown');
+    
+    if (drawerDropdownToggle && drawerDropdown) {
+        drawerDropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            drawerDropdown.classList.toggle('active');
+        });
+    }
+
     // Close drawer when clicking on drawer links
     drawerLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            // Don't close if clicking on dropdown toggle
+            if (this.classList.contains('drawer-dropdown-toggle')) {
+                return;
+            }
+            
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
@@ -150,10 +147,119 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Handle drawer submenu links
+    const drawerSublinks = document.querySelectorAll('.drawer-sublink');
+    drawerSublinks.forEach(sublink => {
+        sublink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            const planId = this.getAttribute('data-plan');
+            
+            // Close drawer first
+            closeDrawer();
+            
+            // Then scroll to target
+            setTimeout(() => {
+                const offsetTop = targetSection.offsetTop - 70;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                
+                // If it's bolt-interview, scroll to interview section instead
+                if (planId === 'bolt-interview') {
+                    setTimeout(() => {
+                        const interviewSection = document.getElementById('interview');
+                        if (interviewSection) {
+                            const interviewOffset = interviewSection.offsetTop - 70;
+                            window.scrollTo({
+                                top: interviewOffset,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 500);
+                } else if (planId) {
+                    // Open the corresponding modal after scrolling
+                    setTimeout(() => {
+                        const modalMap = {
+                            'bolt-classroom': 'modal-bolt-classroom',
+                            'bolt-club': 'modal-bolt-club',
+                            'bolt-linkedin': 'modal-bolt-linkedin',
+                            'bolt-b2b': 'modal-bolt-b2b'
+                        };
+                        if (modalMap[planId]) {
+                            const modal = document.getElementById(modalMap[planId]);
+                            if (modal) {
+                                modal.classList.add('active');
+                                document.body.style.overflow = 'hidden';
+                            }
+                        }
+                    }, 800);
+                }
+            }, 300);
+        });
+    });
+
+    // Handle dropdown items (desktop)
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            const planId = this.getAttribute('data-plan');
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 70;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                
+                // If it's bolt-interview, scroll to interview section instead
+                if (planId === 'bolt-interview') {
+                    setTimeout(() => {
+                        const interviewSection = document.getElementById('interview');
+                        if (interviewSection) {
+                            const interviewOffset = interviewSection.offsetTop - 70;
+                            window.scrollTo({
+                                top: interviewOffset,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 500);
+                } else if (planId) {
+                    // Open the corresponding modal after scrolling
+                    setTimeout(() => {
+                        const modalMap = {
+                            'bolt-classroom': 'modal-bolt-classroom',
+                            'bolt-club': 'modal-bolt-club',
+                            'bolt-linkedin': 'modal-bolt-linkedin',
+                            'bolt-b2b': 'modal-bolt-b2b'
+                        };
+                        if (modalMap[planId]) {
+                            const modal = document.getElementById(modalMap[planId]);
+                            if (modal) {
+                                modal.classList.add('active');
+                                document.body.style.overflow = 'hidden';
+                            }
+                        }
+                    }, 800);
+                }
+            }
+        });
+    });
 
     // Smooth scrolling for navigation links (desktop)
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            // Don't prevent default if it's a dropdown toggle
+            if (this.classList.contains('dropdown-toggle')) {
+                return;
+            }
+            
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
@@ -213,18 +319,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Control WhatsApp button visibility on mobile
+        // Control WhatsApp button visibility (both mobile and desktop)
         const whatsappButton = document.querySelector('.whatsapp-float');
-        if (whatsappButton && window.innerWidth <= 768) {
+        if (whatsappButton) {
             // Show WhatsApp button when scrolled (same logic as back-to-top)
             if (window.scrollY > 100) {
                 whatsappButton.classList.remove('hide-on-home');
             } else {
                 whatsappButton.classList.add('hide-on-home');
             }
-        } else if (whatsappButton && window.innerWidth > 768) {
-            // Always show on desktop
-            whatsappButton.classList.remove('hide-on-home');
         }
     });
 
@@ -232,16 +335,11 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         const whatsappButton = document.querySelector('.whatsapp-float');
         if (whatsappButton) {
-            if (window.innerWidth > 768) {
-                // Always show on desktop
+            // Show when scrolled (same logic for both mobile and desktop)
+            if (window.scrollY > 100) {
                 whatsappButton.classList.remove('hide-on-home');
             } else {
-                // On mobile, show when scrolled (same logic as back-to-top)
-                if (window.scrollY > 100) {
-                    whatsappButton.classList.remove('hide-on-home');
-                } else {
-                    whatsappButton.classList.add('hide-on-home');
-                }
+                whatsappButton.classList.add('hide-on-home');
             }
         }
     });
@@ -270,8 +368,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const videos = document.querySelectorAll('video');
     videos.forEach(video => {
         video.addEventListener('loadeddata', function() {
-            this.play().catch(e => {
-                console.log('Autoplay prevented:', e);
+            this.play().catch(() => {
+                // Autoplay prevented by browser
             });
         });
     });
@@ -306,7 +404,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add click tracking
         whatsappButton.addEventListener('click', function() {
             // Optional: Add analytics tracking here
-            console.log('WhatsApp button clicked');
         });
     }
 
@@ -339,7 +436,6 @@ function initServicesCarousel(debounce) {
     
     // Only initialize on desktop
     if (window.innerWidth < 1024) {
-        console.log('Carousel not initialized - mobile view');
         return;
     }
     

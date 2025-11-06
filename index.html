@@ -51,10 +51,18 @@
                     <img src="src/img/logo.png" alt="Teacher Lara Logo">
                 </a>
                 <a href="#about" class="nav-link" data-aos="fade-down" data-aos-delay="200">Sobre Mim</a>
-                <a href="#services" class="nav-link" data-aos="fade-down" data-aos-delay="300">Soluções</a>
-                <a href="#interview" class="nav-link" data-aos="fade-down" data-aos-delay="400">Bolt Interview</a>
-                <a href="#testimonials" class="nav-link" data-aos="fade-down" data-aos-delay="500">Depoimentos</a>
-                <a href="#contact" class="nav-link" data-aos="fade-down" data-aos-delay="600">Contato</a>
+                <div class="nav-dropdown" data-aos="fade-down" data-aos-delay="300">
+                    <a href="#services" class="nav-link dropdown-toggle">Soluções <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#services" class="dropdown-item" data-plan="bolt-classroom">Aulas Particulares e Mini Grupos</a>
+                        <a href="#services" class="dropdown-item" data-plan="bolt-club">Bolt Club</a>
+                        <a href="#services" class="dropdown-item" data-plan="bolt-interview">Bolt Interview</a>
+                        <a href="#services" class="dropdown-item" data-plan="bolt-linkedin">Bolt LinkedIn</a>
+                        <a href="#services" class="dropdown-item" data-plan="bolt-b2b">Programas para Empresas (B2B)</a>
+                    </div>
+                </div>
+                <a href="#testimonials" class="nav-link" data-aos="fade-down" data-aos-delay="400">Depoimentos</a>
+                <a href="#contact" class="nav-link" data-aos="fade-down" data-aos-delay="500">Contato</a>
             </div>
             
             <!-- Mobile Navigation Toggle Button -->
@@ -78,14 +86,35 @@
                     <i class="fas fa-user"></i>
                     <span>Sobre Mim</span>
                 </a>
-                <a href="#services" class="drawer-link">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Soluções</span>
-                </a>
-                <a href="#interview" class="drawer-link">
-                    <i class="fas fa-bolt"></i>
-                    <span>Bolt Interview</span>
-                </a>
+                <div class="drawer-dropdown">
+                    <a href="#services" class="drawer-link drawer-dropdown-toggle">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Soluções</span>
+                        <i class="fas fa-chevron-down drawer-chevron"></i>
+                    </a>
+                    <div class="drawer-submenu">
+                        <a href="#services" class="drawer-sublink" data-plan="bolt-classroom">
+                            <i class="fas fa-circle" style="font-size: 0.5rem;"></i>
+                            <span>Aulas Particulares e Mini Grupos</span>
+                        </a>
+                        <a href="#services" class="drawer-sublink" data-plan="bolt-club">
+                            <i class="fas fa-circle" style="font-size: 0.5rem;"></i>
+                            <span>Bolt Club</span>
+                        </a>
+                        <a href="#services" class="drawer-sublink" data-plan="bolt-interview">
+                            <i class="fas fa-circle" style="font-size: 0.5rem;"></i>
+                            <span>Bolt Interview</span>
+                        </a>
+                        <a href="#services" class="drawer-sublink" data-plan="bolt-linkedin">
+                            <i class="fas fa-circle" style="font-size: 0.5rem;"></i>
+                            <span>Bolt LinkedIn</span>
+                        </a>
+                        <a href="#services" class="drawer-sublink" data-plan="bolt-b2b">
+                            <i class="fas fa-circle" style="font-size: 0.5rem;"></i>
+                            <span>Programas para Empresas (B2B)</span>
+                        </a>
+                    </div>
+                </div>
                 <a href="#testimonials" class="drawer-link">
                     <i class="fas fa-quote-left"></i>
                     <span>Depoimentos</span>
@@ -109,7 +138,6 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-background" id="hero-background"></div>
         <div class="hero-container">
             <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
                 <div class="hero-text">
@@ -117,12 +145,8 @@
                     <div class="hero-logo-bolt-mobile" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
                         <img src="src/img/logo-bolt.png" alt="Bolt Logo">
                     </div>
-                    
-                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                        Inglês para
-                    </h1>
                     <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                        <span class="highlight">líderes, profissionais e empresas que buscam performance global</span>
+                        Inglês para líderes, profissionais e empresas que buscam performance global.
                     </h2>
                     <p class="hero-description" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                         Prepare-se para se comunicar com confiança em reuniões, apresentações e entrevistas internacionais.
@@ -139,11 +163,8 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-content">
-                <div class="about-image" data-aos="fade-right">
-                    <img src="src/img/aboutme.webp" alt="Teacher Lara Lucchetti">
-                </div>
-                <div class="about-text" data-aos="fade-left">
+            <div class="about-content" data-aos="fade-up">
+                <div class="about-text">
                     <h2 class="section-title">
                         Muito além de <span class="highlight">aulas de inglês.</span> Um método criado para profissionais reais.
                     </h2>
@@ -697,7 +718,7 @@
 
     <!-- WhatsApp Floating Button -->
     <a href="https://api.whatsapp.com/send?phone=5522998705557&text=Olá! Gostaria de saber mais sobre os cursos de inglês." 
-       class="whatsapp-float" 
+       class="whatsapp-float hide-on-home" 
        target="_blank" 
        rel="noopener noreferrer"
        aria-label="Falar no WhatsApp">
@@ -711,11 +732,10 @@
             const script = document.createElement('script');
             script.src = 'https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js';
             script.onerror = function() {
-                console.warn('Primary AOS CDN failed, trying backup...');
                 const backupScript = document.createElement('script');
                 backupScript.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
                 backupScript.onerror = function() {
-                    console.warn('All AOS CDNs failed. Using fallback animations.');
+                    // All AOS CDNs failed. Using fallback animations.
                 };
                 document.head.appendChild(backupScript);
             };
