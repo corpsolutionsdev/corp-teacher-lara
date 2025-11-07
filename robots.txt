@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://teacherlara.com/sitemap.xml
+Sitemap: https://teacherlaraluccetti.com.br/sitemap.xml
 
 # Crawl-delay (opcional - 1 segundo entre requisições)
 Crawl-delay: 1
