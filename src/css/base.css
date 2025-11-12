@@ -566,6 +566,12 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
 }
 
+.service-image i {
+    font-size: 5rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
 .service-image img {
     width: 100%;
     height: 100%;
@@ -574,6 +580,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.carousel-card:hover .service-image i {
     transform: scale(1.05);
 }
 
