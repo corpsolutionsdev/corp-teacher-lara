@@ -1,17 +1,6 @@
 // Teacher Lara - Main JavaScript File
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize WhatsApp button visibility on page load
-    const whatsappButtonInit = document.querySelector('.whatsapp-float');
-    if (whatsappButtonInit) {
-        // Hide by default on both mobile and desktop (will be controlled by scroll)
-        if (window.scrollY > 100) {
-            whatsappButtonInit.classList.remove('hide-on-home');
-        } else {
-            whatsappButtonInit.classList.add('hide-on-home');
-        }
-    }
-    
     // Initialize AOS (Animate On Scroll) with fallback
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -319,30 +308,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Control WhatsApp button visibility (both mobile and desktop)
-        const whatsappButton = document.querySelector('.whatsapp-float');
-        if (whatsappButton) {
-            // Show WhatsApp button when scrolled (same logic as back-to-top)
-            if (window.scrollY > 100) {
-                whatsappButton.classList.remove('hide-on-home');
-            } else {
-                whatsappButton.classList.add('hide-on-home');
-            }
-        }
+        // WhatsApp button is always visible
     });
 
-    // Handle WhatsApp button on window resize
-    window.addEventListener('resize', function() {
-        const whatsappButton = document.querySelector('.whatsapp-float');
-        if (whatsappButton) {
-            // Show when scrolled (same logic for both mobile and desktop)
-            if (window.scrollY > 100) {
-                whatsappButton.classList.remove('hide-on-home');
-            } else {
-                whatsappButton.classList.add('hide-on-home');
-            }
-        }
-    });
+    // WhatsApp button is always visible on resize
 
     // Intersection Observer for animations
     const observerOptions = {
