@@ -1,6 +1,6 @@
-# Teacher Lara | English
+## Teacher Lara | English
 
-**Destrave seu inglês e conquiste o mundo!**
+**Inglês para você se posicionar no trabalho, fale com segurança em reuniões e calls globais**
 
 Site institucional da Teacher Lara Lucchetti - Professora de inglês com mais de 10 anos de experiência. Cursos especializados para profissionais: Speaking Bolt Interview, aulas particulares e muito mais.
 
@@ -10,41 +10,44 @@ Este é um site institucional moderno e responsivo desenvolvido para a Teacher L
 
 ### ✨ Características Principais
 
-- **Design Responsivo**: Otimizado para desktop, tablet e mobile
-- **Performance**: Carregamento rápido e otimizado
-- **SEO Friendly**: Estrutura semântica e meta tags otimizadas
-- **PWA Ready**: Manifest.json configurado para Progressive Web App
-- **Animações Suaves**: Biblioteca AOS para animações on-scroll
-- **Acessibilidade**: Código semântico e acessível
+*   **Design Responsivo**: Otimizado para desktop, tablet e mobile
+*   **Performance**: Carregamento rápido e otimizado
+*   **SEO Friendly**: Estrutura semântica e meta tags otimizadas
+*   **PWA Ready**: Manifest.json configurado para Progressive Web App
+*   **Animações Suaves**: Biblioteca AOS para animações on-scroll
+*   **Acessibilidade**: Código semântico e acessível
 
 ## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
-- **HTML5**: Estrutura semântica e acessível
-- **CSS3**: Estilos modernos com Flexbox e Grid
-- **JavaScript (Vanilla)**: Interatividade e funcionalidades
-- **AOS (Animate On Scroll)**: Animações suaves
-- **Font Awesome**: Ícones profissionais
+
+*   **HTML5**: Estrutura semântica e acessível
+*   **CSS3**: Estilos modernos com Flexbox e Grid
+*   **JavaScript (Vanilla)**: Interatividade e funcionalidades
+*   **AOS (Animate On Scroll)**: Animações suaves
+*   **Font Awesome**: Ícones profissionais
 
 ### SEO e Performance
-- **Meta Tags**: Otimizadas para redes sociais
-- **Open Graph**: Tags para Facebook/LinkedIn
-- **Twitter Cards**: Otimização para Twitter
-- **Sitemap.xml**: Mapa do site para buscadores
-- **Robots.txt**: Diretrizes para crawlers
-- **Manifest.json**: Configuração PWA
+
+*   **Meta Tags**: Otimizadas para redes sociais
+*   **Open Graph**: Tags para Facebook/LinkedIn
+*   **Twitter Cards**: Otimização para Twitter
+*   **Sitemap.xml**: Mapa do site para buscadores
+*   **Robots.txt**: Diretrizes para crawlers
+*   **Manifest.json**: Configuração PWA
 
 ### Recursos
-- **WhatsApp Integration**: Botão flutuante (aparece ao rolar a página) e links diretos
-- **Navegação Dropdown**: Menu de soluções com acesso rápido aos 5 serviços principais
-- **Carousel Responsivo**: Galeria de serviços no desktop
-- **Modais Interativos**: Detalhes dos serviços em modais elegantes
-- **Video Embeds**: Conteúdo multimídia otimizado
-- **Formulários de Contato**: Integração com WhatsApp
+
+*   **WhatsApp Integration**: Botão flutuante (aparece ao rolar a página) e links diretos
+*   **Navegação Dropdown**: Menu de soluções com acesso rápido aos 5 serviços principais
+*   **Carousel Responsivo**: Galeria de serviços no desktop
+*   **Modais Interativos**: Detalhes dos serviços em modais elegantes
+*   **Video Embeds**: Conteúdo multimídia otimizado
+*   **Formulários de Contato**: Integração com WhatsApp
 
 ## 📁 Estrutura do Projeto
 
-```
+```plaintext
 corp-teacher-lara/
 ├── index.html              # Página principal
 ├── manifest.json           # Configuração PWA
@@ -69,74 +72,80 @@ corp-teacher-lara/
 
 ## 🎨 Seções do Site
 
-### 1. **Hero Section**
-- Apresentação principal com call-to-action
-- Layout limpo e focado na mensagem
-- Logo e mensagem principal
+### 1\. **Hero Section**
 
-### 2. **Sobre Mim**
-- Apresentação da Teacher Lara
-- Experiência e credenciais
-- Design em card único com texto à esquerda e background à direita
+*   Apresentação principal com call-to-action
+*   Layout limpo e focado na mensagem
+*   Logo e mensagem principal
 
-### 3. **Como Funciona (Serviços)**
-- Grid responsivo para mobile
-- Carousel interativo para desktop
-- 5 serviços principais com descrições
+### 2\. **Sobre Mim**
 
-### 4. **Bolt Interview**
-- Seção dedicada ao curso principal
-- Cards informativos
-- Preços e benefícios
-- Video demonstrativo
+*   Apresentação da Teacher Lara
+*   Experiência e credenciais
+*   Design em card único com texto à esquerda e background à direita
 
-### 5. **Depoimentos**
-- Testimonials de alunos
-- Sistema de estrelas
-- Animações interativas
+### 3\. **Como Funciona (Serviços)**
 
-### 6. **Contato & CTA**
-- Links para redes sociais
-- Botão WhatsApp principal
-- Informações de contato
+*   Grid responsivo para mobile
+*   Carousel interativo para desktop
+*   5 serviços principais com descrições
+
+### 4\. **Bolt Interview**
+
+*   Seção dedicada ao curso principal
+*   Cards informativos
+*   Preços e benefícios
+*   Video demonstrativo
+
+### 5\. **Depoimentos**
+
+*   Testimonials de alunos
+*   Sistema de estrelas
+*   Animações interativas
+
+### 6\. **Contato & CTA**
+
+*   Links para redes sociais
+*   Botão WhatsApp principal
+*   Informações de contato
 
 ## 🚀 Como Executar
 
 ### Pré-requisitos
-- Navegador web moderno
-- Servidor local (opcional para desenvolvimento)
+
+*   Navegador web moderno
+*   Servidor local (opcional para desenvolvimento)
 
 ### Instalação
 
-1. **Clone o repositório**
-```bash
-git clone https://github.com/seu-usuario/corp-teacher-lara.git
-cd corp-teacher-lara
-```
+**Clone o repositório**
 
-2. **Abra o projeto**
-```bash
-# Opção 1: Abrir diretamente no navegador
-open index.html
+**Abra o projeto**
 
-# Opção 2: Usar servidor local (recomendado)
+## Opção 2: Usar servidor local (recomendado)
+
 python -m http.server 8000
-# ou
+
+## ou
+
 npx serve .
-```
+
+```plaintext
 
 3. **Acesse no navegador**
 ```
+
 http://localhost:8000
-```
+
+````plaintext
 
 ## 📱 Responsividade
 
 O site foi desenvolvido com abordagem **Mobile First** e inclui breakpoints para:
 
-- **Mobile**: < 768px
+- **Mobile**: &lt; 768px
 - **Tablet**: 768px - 1024px  
-- **Desktop**: > 1024px
+- **Desktop**: &gt; 1024px
 
 ### Características Responsivas
 
@@ -160,9 +169,9 @@ O site foi desenvolvido com abordagem **Mobile First** e inclui breakpoints para
 ### Métricas de Performance
 
 - **Lighthouse Score**: 90+ em todas as categorias
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
+- **First Contentful Paint**: &lt; 1.5s
+- **Largest Contentful Paint**: &lt; 2.5s
+- **Cumulative Layout Shift**: &lt; 0.1
 
 ## 🔧 Customização
 
@@ -171,51 +180,53 @@ O site foi desenvolvido com abordagem **Mobile First** e inclui breakpoints para
 --primary-color: #0e285b;      /* Azul principal */
 --secondary-color: #a9e7ff;     /* Azul claro */
 --accent-color: #d9cdff;        /* Roxo claro */
-```
+````
 
 ### Fontes
-- **Primária**: Inter (sans-serif)
-- **Secundária**: Poppins (display)
+
+*   **Primária**: Inter (sans-serif)
+*   **Secundária**: Poppins (display)
 
 ### Animações
-- **AOS**: Animações on-scroll
-- **Hover Effects**: Transições suaves
-- **Loading**: Estados de carregamento
+
+*   **AOS**: Animações on-scroll
+*   **Hover Effects**: Transições suaves
+*   **Loading**: Estados de carregamento
 
 ## 📊 SEO
 
 ### Meta Tags Implementadas
 
-- **Title**: Otimizado para conversão
-- **Description**: Descrição atrativa
-- **Keywords**: Palavras-chave relevantes
-- **Open Graph**: Facebook/LinkedIn
-- **Twitter Cards**: Otimização Twitter
-- **Canonical**: URL canônica
+*   **Title**: Otimizado para conversão
+*   **Description**: Descrição atrativa
+*   **Keywords**: Palavras-chave relevantes
+*   **Open Graph**: Facebook/LinkedIn
+*   **Twitter Cards**: Otimização Twitter
+*   **Canonical**: URL canônica
 
 ### Estrutura Semântica
 
-- **HTML5**: Tags semânticas
-- **Schema.org**: Dados estruturados
-- **Acessibilidade**: ARIA labels
-- **Navegação**: Estrutura lógica
+*   **HTML5**: Tags semânticas
+*   **Schema.org**: Dados estruturados
+*   **Acessibilidade**: ARIA labels
+*   **Navegação**: Estrutura lógica
 
 ## 🤝 Contribuição
 
 ### Como Contribuir
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+1.  Fork o projeto
+2.  Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3.  Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4.  Push para a branch (`git push origin feature/AmazingFeature`)
+5.  Abra um Pull Request
 
 ### Padrões de Código
 
-- **HTML**: Semântico e acessível
-- **CSS**: BEM methodology
-- **JavaScript**: ES6+ e modular
-- **Commits**: Conventional Commits
+*   **HTML**: Semântico e acessível
+*   **CSS**: BEM methodology
+*   **JavaScript**: ES6+ e modular
+*   **Commits**: Conventional Commits
 
 ## 📄 Licença
 
@@ -224,21 +235,31 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 👥 Desenvolvimento
 
 **Desenvolvido por:**
-- [Corp IT Solutions](https://corpitsolutions.tec.br) - Desenvolvimento e Design
-- [VWTech Dev](https://vwtechdev.com.br) - Powered by
+
+*   [Corp IT Solutions](https://corpitsolutions.tec.br) - Desenvolvimento e Design
+*   [VWTech Dev](https://vwtechdev.com.br) - Powered by
 
 **Contato:**
-- **Email**: contato@corpitsolutions.tec.br
-- **Website**: https://corpitsolutions.tec.br
+
+*   **Email**: contato@corpitsolutions.tec.br
+*   **Website**: https://corpitsolutions.tec.br
 
 ## 📞 Suporte
 
 Para suporte técnico ou dúvidas sobre o projeto:
 
-- **Issues**: Use o sistema de issues do GitHub
-- **Email**: contato@corpitsolutions.tec.br
-- **Website**: https://corpitsolutions.tec.br
-
----
+*   **Issues**: Use o sistema de issues do GitHub
+*   **Email**: contato@corpitsolutions.tec.br
+*   **Website**: https://corpitsolutions.tec.br
 
 **Teacher Lara Lucchetti** - Destrave seu inglês e conquiste o mundo! 🌍✨
+
+```plaintext
+# Opção 1: Abrir diretamente no navegador
+open index.html
+```
+
+```plaintext
+git clone https://github.com/seu-usuario/corp-teacher-lara.git
+cd corp-teacher-lara
+```

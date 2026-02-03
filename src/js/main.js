@@ -366,11 +366,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // WhatsApp Floating Button functionality
+    // WhatsApp Floating Button: esconder só no topo (home), mostrar ao fazer scroll
     const whatsappButton = document.querySelector('.whatsapp-float');
-    
+    const HOME_SCROLL_THRESHOLD = 200; // px de scroll após o qual o botão aparece (fora da home)
+
+    function updateWhatsAppVisibility() {
+        if (!whatsappButton) return;
+        const scrollY = window.scrollY || window.pageYOffset;
+        if (scrollY > HOME_SCROLL_THRESHOLD) {
+            whatsappButton.classList.remove('hide-on-home');
+        } else {
+            whatsappButton.classList.add('hide-on-home');
+        }
+    }
+
     if (whatsappButton) {
-        // Add click tracking
+        updateWhatsAppVisibility();
+        window.addEventListener('scroll', updateWhatsAppVisibility, { passive: true });
+        window.addEventListener('resize', updateWhatsAppVisibility);
         whatsappButton.addEventListener('click', function() {
             // Optional: Add analytics tracking here
         });
@@ -409,7 +422,7 @@ function initServicesCarousel(debounce) {
     }
     
     
-    let currentIndex = 2; // Start with card 3 (middle card - index 2)
+    let currentIndex = 2; // Card central = bolt-classroom (índice 2: 2 antes, 2 depois)
     let isTransitioning = false;
     const cardWidth = 400; // Base card width
     const gap = 32; // Gap between cards
