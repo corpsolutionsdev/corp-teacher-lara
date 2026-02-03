@@ -743,6 +743,21 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 20px 40px rgba(14, 40, 91, 0.15);
 }
 
+/* Card Aulas Particulares (bolt-classroom) em evidência no mobile - mesmo destaque do desktop */
+.services-grid .service-card[data-plan="bolt-classroom"] {
+    background: linear-gradient(180deg, #e0f2fe 0%, #bae6fd 50%, #e0f2fe 100%);
+    border: 2px solid rgba(14, 40, 91, 0.2);
+    box-shadow: 0 12px 40px rgba(14, 40, 91, 0.15), 0 0 0 1px rgba(14, 40, 91, 0.08);
+}
+
+.services-grid .service-card[data-plan="bolt-classroom"] .service-image {
+    background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 50%, #e0f2fe 100%);
+}
+
+.services-grid .service-card[data-plan="bolt-classroom"]:hover {
+    box-shadow: 0 20px 50px rgba(14, 40, 91, 0.22), 0 0 0 2px rgba(14, 40, 91, 0.12);
+}
+
 /* Interview Section */
 .interview {
     padding: 100px 0;
